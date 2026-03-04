@@ -75,6 +75,24 @@ if(form) {
         }, 3000);
     });
 }
+// 3. MENU MOBILE (Hambúrguer)
+const mobileMenu = document.getElementById('mobile-menu');
+const navbar = document.querySelector('.navbar');
+const navLinksClick = document.querySelectorAll('.nav-links li a');
+
+if(mobileMenu && navbar) {
+    // Abre/Fecha o menu ao clicar no ícone
+    mobileMenu.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
+
+    // Fecha o menu automaticamente quando clica em algum link
+    navLinksClick.forEach(link => {
+        link.addEventListener('click', () => {
+            navbar.classList.remove('active');
+        });
+    });
+}
 
   
 });
