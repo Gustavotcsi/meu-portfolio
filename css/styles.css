@@ -1,0 +1,401 @@
+/* =========================================
+   1. VARIÁVEIS E RESET GLOBAL
+========================================= */
+:root {
+    --bg-main: #0a0a0a;       /* Preto profundo para o fundo principal */
+    --bg-darker: #121212;     /* Leve variação para seções alternadas */
+    --card-bg: #1a1a1a;       /* Fundo dos cards */
+    --text-light: #f8f9fa;    /* Branco quase puro para títulos */
+    --text-muted: #a1a1aa;    /* Cinza claro para parágrafos */
+    --accent-blue: #3b82f6;   /* Azul moderno de tecnologia */
+    --accent-hover: #2563eb;  /* Azul mais escuro para hover */
+    --border-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave ao clicar no menu */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-light);
+    line-height: 1.5; /* Altura da linha um pouco mais ajustada */
+    letter-spacing: -0.3px; /* Isso "aperta" levemente as letras, dando o ar moderno */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+/* =========================================
+   ESTILOS DA SEÇÃO SOBRE
+========================================= */
+.sobre-content {
+    text-align: center;        /* Centraliza todo o texto */
+    max-width: 800px;          /* Limita a largura para não ficar "esticado" */
+    margin: 0 auto;            /* Centraliza o bloco de texto na tela */
+    font-size: 1.1rem;         /* Deixa a fonte um pouquinho maior para leitura */
+}
+
+.sobre-content p {
+    margin-bottom: 20px;       /* Dá um respiro entre um parágrafo e outro */
+    color: var(--text-muted);  /* Deixa o texto num tom de cinza elegante */
+}
+
+/* =========================================
+   2. CLASSES UTILITÁRIAS & LAYOUT
+========================================= */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-darker {
+    background-color: var(--bg-darker);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.highlight {
+    color: var(--accent-blue);
+}
+
+/* =========================================
+   3. BOTÕES
+========================================= */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--accent-blue);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+.btn-outline:hover {
+    background-color: var(--accent-blue);
+    color: #fff;
+}
+
+/* =========================================
+   4. CABEÇALHO (HEADER)
+========================================= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.9); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de vidro moderno */
+    z-index: 1000;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--accent-blue);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a:hover {
+    color: var(--accent-blue);
+}
+/* =========================================
+   ESTILOS DOS DEPOIMENTOS (CLIENTES)
+========================================= */
+.depoimento-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.estrelas {
+    color: #fbbf24; /* Amarelo/Dourado moderno */
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.comentario {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.cliente-nome {
+    display: block;
+    font-weight: 600;
+    color: var(--accent-blue);
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   5. SEÇÃO HERO
+========================================= */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px; /* Compensa o header fixo */
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* =========================================
+   6. CARDS (SERVIÇOS E PROJETOS)
+========================================= */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.card p {
+    color: var(--text-muted);
+}
+
+/* Projetos */
+.card-projeto {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+/* Estilo para as imagens reais dos projetos */
+.projeto-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito legal: a imagem dá um leve zoom quando você passa o mouse no card */
+.card-projeto:hover .projeto-img {
+    transform: scale(1.05);
+}
+
+.projeto-info {
+    padding: 20px;
+    position: relative; /* Necessário para manter o texto sobre a imagem se o zoom passar */
+    background-color: var(--card-bg);
+    z-index: 2;
+}
+
+.projeto-info h3 {
+    margin-bottom: 10px;
+}
+
+.projeto-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   7. FORMULÁRIO DE CONTATO
+========================================= */
+.contato-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.contato-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-light);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
+/* =========================================
+   8. RODAPÉ
+========================================= */
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   9. RESPONSIVIDADE (MOBILE)
+========================================= */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section {
+        height: auto;
+        padding: 150px 0 80px;
+        text-align: center;
+    }
+
+    .hero-content p {
+        margin: 0 auto 30px;
+    }
+}
+/* =========================================
+   ESTILOS DOS LINKS DO RODAPÉ
+========================================= */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    font-weight: 600;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.social-links a:hover {
+    color: var(--accent-blue);
+    transform: translateY(-2px);
+    display: inline-block;
+}
+
+/* =========================================
+   10. ANIMAÇÕES JS (FADE-IN / SLIDE-UP)
+========================================= */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Atraso nos cards para aparecerem em cascata */
+.cards-grid .hidden:nth-child(2) { transition-delay: 0.2s; }
+.cards-grid .hidden:nth-child(3) { transition-delay: 0.4s; }
