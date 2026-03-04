@@ -1,14 +1,12 @@
-/* =========================================
-   1. VARIÁVEIS E RESET GLOBAL
-========================================= */
+
 :root {
-    --bg-main: #0a0a0a;       /* Preto profundo para o fundo principal */
-    --bg-darker: #121212;     /* Leve variação para seções alternadas */
-    --card-bg: #1a1a1a;       /* Fundo dos cards */
-    --text-light: #f8f9fa;    /* Branco quase puro para títulos */
-    --text-muted: #a1a1aa;    /* Cinza claro para parágrafos */
-    --accent-blue: #3b82f6;   /* Azul moderno de tecnologia */
-    --accent-hover: #2563eb;  /* Azul mais escuro para hover */
+    --bg-main: #0a0a0a;       
+    --bg-darker: #121212;     
+    --card-bg: #1a1a1a;       
+    --text-light: #f8f9fa;   
+    --text-muted: #a1a1aa;    
+    --accent-blue: #3b82f6;   
+    --accent-hover: #2563eb;  
     --border-color: #333333;
 }
 
@@ -19,15 +17,15 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Rolagem suave ao clicar no menu */
+    scroll-behavior: smooth; 
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-main);
     color: var(--text-light);
-    line-height: 1.5; /* Altura da linha um pouco mais ajustada */
-    letter-spacing: -0.3px; /* Isso "aperta" levemente as letras, dando o ar moderno */
+    line-height: 1.5; 
+    letter-spacing: -0.3px; 
 }
 
 a {
@@ -39,24 +37,20 @@ a {
 ul {
     list-style: none;
 }
-/* =========================================
-   ESTILOS DA SEÇÃO SOBRE
-========================================= */
+
 .sobre-content {
-    text-align: center;        /* Centraliza todo o texto */
-    max-width: 800px;          /* Limita a largura para não ficar "esticado" */
-    margin: 0 auto;            /* Centraliza o bloco de texto na tela */
-    font-size: 1.1rem;         /* Deixa a fonte um pouquinho maior para leitura */
+    text-align: center;        
+    max-width: 800px;          
+    margin: 0 auto;            
+    font-size: 1.1rem;         
 }
 
 .sobre-content p {
-    margin-bottom: 20px;       /* Dá um respiro entre um parágrafo e outro */
-    color: var(--text-muted);  /* Deixa o texto num tom de cinza elegante */
+    margin-bottom: 20px;      
+    color: var(--text-muted);  
 }
 
-/* =========================================
-   2. CLASSES UTILITÁRIAS & LAYOUT
-========================================= */
+
 .container {
     width: 100%;
     max-width: 1100px;
@@ -83,9 +77,7 @@ ul {
     color: var(--accent-blue);
 }
 
-/* =========================================
-   3. BOTÕES
-========================================= */
+
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -119,16 +111,14 @@ ul {
     color: #fff;
 }
 
-/* =========================================
-   4. CABEÇALHO (HEADER)
-========================================= */
+
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(10, 10, 10, 0.9); /* Fundo semi-transparente */
-    backdrop-filter: blur(10px); /* Efeito de vidro moderno */
+    background-color: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(10px); 
     z-index: 1000;
     padding: 20px 0;
     border-bottom: 1px solid var(--border-color);
@@ -158,9 +148,7 @@ ul {
 .nav-links a:hover {
     color: var(--accent-blue);
 }
-/* =========================================
-   ESTILOS DOS DEPOIMENTOS (CLIENTES)
-========================================= */
+
 .depoimento-card {
     display: flex;
     flex-direction: column;
@@ -168,7 +156,7 @@ ul {
 }
 
 .estrelas {
-    color: #fbbf24; /* Amarelo/Dourado moderno */
+    color: #fbbf24; 
     font-size: 1.3rem;
     margin-bottom: 15px;
     letter-spacing: 2px;
@@ -186,14 +174,12 @@ ul {
     font-size: 0.95rem;
 }
 
-/* =========================================
-   5. SEÇÃO HERO
-========================================= */
+
 .hero-section {
     height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 80px; /* Compensa o header fixo */
+    padding-top: 80px; 
 }
 
 .hero-content {
@@ -214,9 +200,7 @@ ul {
     max-width: 600px;
 }
 
-/* =========================================
-   6. CARDS (SERVIÇOS E PROJETOS)
-========================================= */
+
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -245,7 +229,7 @@ ul {
     color: var(--text-muted);
 }
 
-/* Projetos */
+
 .card-projeto {
     background-color: var(--card-bg);
     border-radius: 12px;
@@ -263,14 +247,14 @@ ul {
     transition: transform 0.3s ease;
 }
 
-/* Efeito legal: a imagem dá um leve zoom quando você passa o mouse no card */
+
 .card-projeto:hover .projeto-img {
     transform: scale(1.05);
 }
 
 .projeto-info {
     padding: 20px;
-    position: relative; /* Necessário para manter o texto sobre a imagem se o zoom passar */
+    position: relative; 
     background-color: var(--card-bg);
     z-index: 2;
 }
@@ -284,9 +268,7 @@ ul {
     font-size: 0.95rem;
 }
 
-/* =========================================
-   7. FORMULÁRIO DE CONTATO
-========================================= */
+
 .contato-subtitle {
     text-align: center;
     color: var(--text-muted);
@@ -320,9 +302,7 @@ ul {
     border-color: var(--accent-blue);
 }
 
-/* =========================================
-   8. RODAPÉ
-========================================= */
+
 .footer {
     text-align: center;
     padding: 30px 0;
@@ -331,11 +311,8 @@ ul {
     font-size: 0.9rem;
 }
 
-/* =========================================
-   9. RESPONSIVIDADE (MOBILE) E MENU HAMBÚRGUER
-========================================= */
 
-/* Estilo do botão Hamburguer (Oculto no Desktop por padrão) */
+
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -354,27 +331,27 @@ ul {
 
 @media (max-width: 768px) {
     .header .container {
-        flex-direction: row; /* Mantém logo e menu na mesma linha */
+        flex-direction: row; 
         justify-content: space-between;
     }
     
-    /* Mostra o botão hambúrguer no celular */
+    
     .menu-toggle {
         display: flex;
     }
 
-    /* Transforma a navbar num menu suspenso escondido */
+    
     .navbar {
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: rgba(10, 10, 10, 0.98); /* Fundo escuro */
+        background-color: rgba(10, 10, 10, 0.98); 
         backdrop-filter: blur(10px);
         padding: 30px 0;
         border-bottom: 1px solid var(--border-color);
         
-        /* Esconde o menu usando animação */
+       
         transform: translateY(-150%);
         opacity: 0;
         visibility: hidden;
@@ -382,7 +359,7 @@ ul {
         z-index: 999;
     }
 
-    /* Classe ativada pelo JS para mostrar o menu */
+    
     .navbar.active {
         transform: translateY(0);
         opacity: 1;
